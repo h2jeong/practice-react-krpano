@@ -89,7 +89,6 @@ const styleLess = css`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
@@ -106,12 +105,7 @@ const styleLess = css`
   section {
     display: block;
   }
-  body {
-    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-    font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1;
-  }
+
   ol,
   ul {
     list-style: none;
