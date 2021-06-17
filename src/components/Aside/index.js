@@ -17,13 +17,13 @@ const MenuItem = ({ children, path, exact }) => {
 };
 
 const Aside = () => {
-  const [collased, setcollased] = useState(window.innerWidth <= 750);
+  const [collapsed, setcollapsed] = useState(window.innerWidth <= 750);
   const onToggle = useCallback(() => {
-    setcollased(!collased);
-  }, [collased, setcollased]);
+    setcollapsed(!collapsed);
+  }, [collapsed, setcollapsed]);
 
   return (
-    <aside className={`app-aside ${collased ? 'collased' : ''}`}>
+    <aside className={`app-aside ${collapsed ? 'collapsed' : ''}`}>
       <VStack>
         <div className="aside-title">React Krpano Examples</div>
         <VStack className="aside-menu">

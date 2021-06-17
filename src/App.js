@@ -7,12 +7,12 @@ import PageMultires from './pages/Multires';
 import PageRedux from './pages/Redux';
 import Aside from './components/Aside';
 import { FlexItem, HStack, VStack } from './components/FlexContainer';
-import Header from './components/Header';
+// import Header from './components/Header';
 
 function App() {
   return (
     <VStack className="App">
-      <Header />
+      {/* <Header /> */}
       <HStack>
         <Aside />
         <FlexItem>

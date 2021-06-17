@@ -31,6 +31,7 @@
 }
 
 .h-stack {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
@@ -49,6 +50,7 @@
 
 .flex-item > div {
   flex: 1;
+  height: 100vh;
 }
 
 :root {
@@ -64,6 +66,7 @@
 }
 
 .app-aside {
+  flex: 0 0 2;
   border-right: 1px solid #eee;
   color: #364149;
   width: var(--aside-width, 300px);
@@ -73,10 +76,11 @@
   &.collapsed {
     border-right: none;
     width: 0;
-  }
-  &.collapsed .aside-title,
-  &.collapsed .aside-menu {
-    overflow: hidden;
+
+    .aside-title,
+    .aside-menu {
+      overflow: hidden;
+    }
   }
 }
 
@@ -99,9 +103,10 @@
 
   &.active {
     border-right: 2px solid var(--theme-color, #42b983);
-  }
-  &.active .aside-menu-item-link {
-    color: var(--theme-color, #42b983);
+
+    .aside-menu-item-link {
+      color: var(--theme-color, #42b983);
+    }
   }
 }
 
@@ -141,6 +146,7 @@
   position: absolute;
   right: 30px;
   bottom: 30px;
+  display: flex;
   line-height: 60px;
 }
 
@@ -155,13 +161,6 @@
   color: #fff;
   cursor: pointer;
   z-index: 100;
-}
-
-.github-corner svg {
-  color: #fff;
-  fill: var(--theme-color, #42b983);
-  height: 80px;
-  width: 80px;
 }
 
 .page-switch-scene {
@@ -199,29 +198,6 @@
 
 .page-redux {
   position: relative;
-}
-
-.action-bar {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  display: flex;
-  line-height: 60px;
-}
-
-.action-button {
-  flex-shrink: 0;
-  margin: 0 10px;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 50px;
-  line-height: 52px;
-  vertical-align: middle;
-  color: #fff;
-  cursor: pointer;
-  z-index: 100;
 }
 
 .scene-list-item--add {
