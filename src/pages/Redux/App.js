@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Hotspot, Krpano, Scene } from '@0xllllh/react-krpano';
 import React, { useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -20,8 +19,8 @@ const ReduxApp = () => {
       dispatch(loadPano(pano));
     });
   }, []);
+
   const onAddHotspot = useCallback(() => {
-    console.log(renderer);
     dispatch(
       addHotspot({
         name: `hotspot${hotspotCount + 1}`,
@@ -31,11 +30,13 @@ const ReduxApp = () => {
       })
     );
   }, [renderer, hotspotCount]);
+
   const onSave = useCallback(() => {
     api.savePanoState(currentState).then(() => {
       window.alert('pano saved');
     });
   }, [currentState]);
+
   const handleChangeScene = (name) => {
     dispatch(changeCurrentScene(name));
   };

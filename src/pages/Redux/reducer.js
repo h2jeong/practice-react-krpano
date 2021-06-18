@@ -55,6 +55,7 @@ export default function reducer(state = initialState, action = {}) {
       };
       return { ...state, scenes, hotspots };
     }
+
     default:
       return state;
   }
